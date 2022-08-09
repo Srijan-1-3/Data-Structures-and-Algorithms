@@ -85,9 +85,27 @@ void append(int data){
     
     ptr->next = new_node;
     
+    
    	}
    }
-   
+
+
+
+ void reverse(){
+
+ 	Node *first = head;
+ 	Node *second = first->next;
+    Node *temp;
+ 	while(second){
+
+ 		temp = second->next;
+ 		second->next = first;
+ 		first = second;
+ 		second = temp;
+ 	}
+ 	head->next = NULL;
+ 	head=first;
+ }
    
 
 
@@ -129,6 +147,11 @@ int main(){
    cout<<"The linked list after deletion is : "<<endl;
    display();
    cout<<endl;
+
+
+  reverse();
+  cout<<"The linked list after reversing is : "<<endl;
+  display();
    
 
 	return 0;
