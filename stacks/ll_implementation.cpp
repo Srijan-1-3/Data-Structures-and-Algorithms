@@ -99,10 +99,7 @@ int main(){
     cout<<endl;
 
     s.pop();
-    s.pop();
-    s.pop();
-    s.pop();
-    s.pop();
+    
     
     cout<<"The stack after popping is : "<<endl;
     s.display();
